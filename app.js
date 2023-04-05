@@ -1,5 +1,7 @@
 let kot = document.getElementById('kot');
 let pies = document.getElementById('dog');
+let card = document.getElementById('card');
+let score = 0;
 function stop () {
     kot.style.animationPlayState = "running";
 }
@@ -14,9 +16,12 @@ document.body.onkeyup = function(e) {
     if (i === 0){
     kot.style.top = "0px";
     i++;
+    
     } else if(i === 1) {
         kot.style.top = "200px";
         i--;
+        score ++; 
+    card.innerText = score; 
     }
   }
  
